@@ -1,4 +1,4 @@
-import userEvent from "@testing-library/user-event"
+// import userEvent from "@testing-library/user-event"
 
 const Data =
 {
@@ -21,18 +21,36 @@ const Data =
             id: 1,
             trainingname: 'Box',
             starttime: '10',
-            warmup: '2400',
-            stretch: '1200',
-            pullup: 0,
+            trainings: [
+                {
+                    id: 1,
+                    name: 'Warmup',
+                    duration: '2400',
+                },
+                {
+                    id: 2,
+                    name: 'stretch',
+                    duration: '1200',
+                },
+            ],
             club: 'sport club'
         },
         {
             id: 2,
             trainingname: 'Crossfit',
             starttime: '12',
-            warmup: '1200',
-            pullup: '1200',
-            stretch: 0,
+            trainings: [
+                {
+                    id: 1,
+                    name: 'Warmup',
+                    duration: '1200',
+                },
+                {
+                    id: 2,
+                    name: 'Pullup',
+                    duration: '1200',
+                },
+            ],
             club: 'sport club'
         }
 

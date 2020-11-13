@@ -1,9 +1,9 @@
 import React from 'react'
 import './userprofile.styles.scss'
 
-export const UserProfile = ({ name, free, type, sport ,dp}) => (
+export const UserProfile = ({ name, free, type, sport ,dp, width, height}) => (
     <div className='profile'>
-        <img className='profile-pic' src={dp} alt={name} />
+        <img style={{width: `${width}px`, height: `${height}px`}} className='profile-pic' src={dp} alt={name} />
         <div className='about'>
             <h4>{name}</h4>
             {

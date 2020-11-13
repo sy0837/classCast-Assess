@@ -1,0 +1,22 @@
+.bars, .label{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .label{
+      
+        h6{
+            padding: 0;
+            margin: 0 2px 0 0;
+            font-size: 10px;
+            
+        }
+    }
+    img{
+        height: 26px;
+        width: 26px;
+    }
+    span{
+        font-size:  36px;
+    }
+}

@@ -6,7 +6,7 @@ export const TrainerBar= () =>{
     const trainerlist= useContext(TrainerContext)
     return(
         <div className='trainer-bar'>
-        <h2>Trainer</h2>
+        <h2 className='sub-title'>Trainer</h2>
             {
                 trainerlist.map( t =>(
                     <Trainer key={t.id} {...t}/>

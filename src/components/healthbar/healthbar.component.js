@@ -1,43 +1,41 @@
 import React, { useContext } from 'react'
 import { HealthStatsContext } from '../../context/user/user.context'
-import { ProgressBar } from '../progressbar/progressbar.component'
+import { HealthTracker } from '../healthtracker/healthtracker.component'
 import './healthbar.styles.scss'
 
 export const HealthBar = () => {
     const { sleep, bpm, cal, sleeplimit, callimit, bpmlimit } = useContext(HealthStatsContext)
     const hrs = Math.floor(sleep / 3600)
     const min = (sleep % 3600) / 60
-    const sleepprog=Math.floor((sleep/sleeplimit)*100)
-    const bpmprog=Math.floor((bpm/bpmlimit)*100)
-    const calprog=Math.floor((cal/callimit)*100)
+    const sleepprog = Math.floor((sleep / sleeplimit) * 100)
+    const bpmprog = Math.floor((bpm / bpmlimit) * 100)
+    const calprog = Math.floor((cal / callimit) * 100)
     return (
         <div className='health-bar'>
-            <h2>Health</h2>
+            <h2 className='sub-title'>Health</h2>
             <div className='bars'>
-                <div>
-                    <span>{hrs + ':' + min}</span>
-                    <div className='label'>
-                        <img src={require('../../assets/sleep.svg').default} alt='hours' />
-                        <h6>Hours</h6>
-                    </div>
-                    <ProgressBar color="#3e64ff" progress={sleepprog} />
-                </div>
-                <div>
-                    <span>{bpm}</span>
-                    <div  className='label'>
-                        <img src={require('../../assets/heartbeat.svg').default} alt='BPM' />
-                        <h6>Bpm</h6>
-                    </div>
-                    <ProgressBar color="red" progress={bpmprog} />
-                </div>
-                <div>
-                    <span>{cal}</span>
-                    <div  className='label'>
-                        <img src={require('../../assets/healthcare.svg').default} alt='KCAL' />
-                        <h6>Kcal</h6>
-                    </div>
-                    <ProgressBar color="#81b214" progress={calprog} />
-                </div>
+                <HealthTracker
+                    hrs={hrs}
+                    min={min}
+                    label="Hours"
+                    progresspercent={sleepprog}
+                    src={require('../../assets/sleep.svg').default}
+                    colorthemes="#3e64ff"
+                />
+                <HealthTracker
+                    data={bpm}
+                    label="Bpm"
+                    progresspercent={bpmprog}
+                    colorthemes='red'
+                    src={require('../../assets/heartbeat.svg').default}
+                />
+                <HealthTracker
+                    data={cal}
+                    label="Kcal"
+                    progresspercent={calprog}
+                    colorthemes='#81b214'
+                    src={require('../../assets/healthcare.svg').default}
+                />
             </div>
         </div>
     )

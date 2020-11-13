@@ -4,14 +4,14 @@ const Data =
 {
     name: 'Emma Green',
     dp: require('../../assets/profile.jpg').default,
-    notification: 6,
+    notification: 10,
     freeaccount: true,
     type: 'user',
     healthstats:
     {
-        sleep: '23100',
+        sleep: '13100',
         sleeplimit: '28800',
-        bpm: '120',
+        bpm: '95',
         bpmlimit: '120',
         cal: '1.24',
         callimit: '3'
@@ -20,7 +20,7 @@ const Data =
         {
             id: 1,
             trainingname: 'Box',
-            starttime: '10',
+            starttime: '10:00',
             trainings: [
                 {
                     id: 1,
@@ -38,7 +38,7 @@ const Data =
         {
             id: 2,
             trainingname: 'Crossfit',
-            starttime: '12',
+            starttime: '12:00',
             trainings: [
                 {
                     id: 1,
@@ -61,16 +61,18 @@ const Data =
             id: 1,
             name: 'John Kavanogh',
             dp: 'https://source.unsplash.com/random/30x30',
-            sport: 'mma',
-            type: 'trainer'
+            sport: 'Mma',
+            type: 'trainer',
+            online: true
         },
         {
             id: 2,
             name: 'Jonas Jacob',
             dp: 'https://source.unsplash.com/random/50x50',
             sport: 'Box',
-            type: 'trainer'
-        }
+            type: 'trainer',
+            online: true
+        },
     ]
 
 }

@@ -6,7 +6,9 @@ import './healthbar.styles.scss'
 export const HealthBar = () => {
     const { sleep, bpm, cal, sleeplimit, callimit, bpmlimit } = useContext(HealthStatsContext)
     const hrs = Math.floor(sleep / 3600)
-    const min = (sleep % 3600) / 60
+    var min = Math.floor((sleep % 3600)/ 60) 
+    if(min< 9)
+    min='0'+min
     const sleepprog = Math.floor((sleep / sleeplimit) * 100)
     const bpmprog = Math.floor((bpm / bpmlimit) * 100)
     const calprog = Math.floor((cal / callimit) * 100)

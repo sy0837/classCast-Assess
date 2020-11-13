@@ -1,4 +1,5 @@
 import React from 'react'
+import { MoreOption } from '../moreoption/moreoption.component'
 import { ShadowDiv } from '../shadowdiv/shadowdiv.component'
 import { Training } from './training.component'
 
@@ -20,13 +21,14 @@ export const TrainingInfo = ({ trainingname, starttime, club, trainings, id }) =
                 <div className='about-training'>
                     <h4>{trainingname}</h4>
                     <p>{club}</p>
-                    <span><p>{starttime}</p></span>
+                    <span className='time'>{starttime}</span>
                 </div>
                 {
                     trainings.map(t => (
                         <Training key={t.id} {...t} />
                     ))
                 }
+                <MoreOption/>
             </div>
         </ShadowDiv>
     )

@@ -1,5 +1,13 @@
 .health-bar{
-    margin-top: 50px;
+    margin: 35px 0 25px;
+    .bars{
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 5px;
+        span{
+            font-size:  36px;
+        }
+    }
     .progress-bar{
         margin-top: 10px;
     }

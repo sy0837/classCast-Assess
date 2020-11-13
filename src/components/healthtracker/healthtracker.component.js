@@ -9,7 +9,7 @@ export const HealthTracker = ({ hrs, min, data, progresspercent, src, label ,col
         }
         <div className='label'>
             <img src={src} alt={label} />
-            <h6>{label}</h6>
+            <h6 className='label-type'>{label}</h6>
         </div>
         <ProgressBar color={colorthemes} progress={progresspercent} />
     </div>

@@ -1,3 +1,6 @@
+.training-bar{
+    margin: 30px 0;
+}
 .training-info{
     display: flex;
     flex-direction: row;
@@ -5,6 +8,7 @@
     background-color: blue;
     color: white;
     margin-bottom: 20px;
+    padding: 10px 20px;
 }
 .training{
     text-align: center;   

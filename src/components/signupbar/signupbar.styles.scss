@@ -1,0 +1,19 @@
+.signup{
+    padding: 10px 20px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    background-color: rgba(248, 168, 103, 0.2);
+    position: relative;
+    border-radius: 20px;
+    z-index: 1;
+    margin: 10px 0;
+    // box-shadow: 0 10px 0px -6px rgb(255,150,66);
+    p{
+        font-size: 12px;
+    }
+    img{
+        width: 60px;
+        height: 80px;
+    }
+}
